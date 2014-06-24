@@ -18,7 +18,7 @@ Namespace is `Bn`
 
 ### View
 
-```
+```coffeescript
 class MyView extends Bn.View
 	# render automatically
 	template: '''
@@ -42,7 +42,7 @@ And view has all event emitter api.
 
 ### EventEmitter
 
-```
+```coffeescript
 ee = new Bn.EventEmitter
 
 fn = -> console.log 'hello1'

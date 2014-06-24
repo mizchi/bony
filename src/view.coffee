@@ -5,6 +5,10 @@ EventEmitter = require './event-emitter-lite'
 module.exports = class View
   extend @::, EventEmitter::
 
+  @extend: (params) ->
+    class extends View
+      extend @::, params
+
   template: ''
   constructor: (el) ->
     @$el = $(el)
