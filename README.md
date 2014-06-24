@@ -47,8 +47,8 @@ ee = new Bn.EventEmitter
 
 fn = -> console.log 'hello1'
 
-ee.on 'hello1', fn
-ee.on 'hello2', -> console.log 'hello2'
+ee.on 'hello', fn
+ee.on 'hello', -> console.log 'hello2'
 
 ee.trigger 'hello' #=> hello1, hello2
 ee.off 'hello', fn # remove fn 
