@@ -20,15 +20,15 @@ Namespace is `Bn`
 
 ```coffeescript
 class MyView extends Bn.View
-	# render automatically
-	template: '''
-		<div class='my-view'>
-		</div>
-	'''
+  # render automatically
+  template: '''
+    <div class='my-view'>
+    </div>
+  '''
   constructor: ->
-		super
-		@$('.my-view').text 'this is my view.'
-		@attachTo 'body'
+    super
+    @$('.my-view').text 'this is my view.'
+    @attachTo 'body'
 ```
 
 - View#$el : jQueryElement
