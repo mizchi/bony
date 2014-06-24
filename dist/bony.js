@@ -29,6 +29,10 @@ module.exports = EventEmitterLite = (function() {
 
   EventEmitterLite.prototype.off = function(eventName, fn) {
     var n, _ref;
+    if (arguments.length === 0) {
+      delete this.events;
+      return this;
+    }
     if (fn != null) {
       n = (_ref = this.events[eventName]) != null ? _ref.indexOf(fn) : void 0;
       if (n > -1) {
@@ -101,6 +105,11 @@ module.exports = View = (function() {
   View.prototype.$ = function() {
     var _ref;
     return (_ref = this.$el).find.apply(_ref, arguments);
+  };
+
+  View.prototype.remove = function() {
+    this.off();
+    return this.$el.remove();
   };
 
   View.prototype.hide = function() {

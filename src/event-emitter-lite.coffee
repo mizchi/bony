@@ -6,6 +6,9 @@ module.exports = class EventEmitterLite
     @
 
   off: (eventName, fn) ->
+    if arguments.length is 0
+      delete @events
+      return @
     if fn?
       # n = _.findIndex @events[eventName], (i) -> i is fn
       n = @events[eventName]?.indexOf fn

@@ -12,6 +12,10 @@ module.exports = class View
 
   $: -> @$el.find arguments...
 
+  remove: ->
+    @off()
+    @$el.remove()
+
   hide: -> @$el.hide()
 
   show: -> @$el.show()
