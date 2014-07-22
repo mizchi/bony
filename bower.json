@@ -1,7 +1,7 @@
 {
   "name": "bony",
   "version": "0.0.1",
-  "main": "dist/bony.min.js",
+  "main": "dist/bony.js",
   "authors": [
     "Koutarou Chikuba <miz404@gmail.com>"
   ],
