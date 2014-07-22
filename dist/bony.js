@@ -1,14 +1,12 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-window.Bn = {};
+!function(e){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=e();else if("function"==typeof define&&define.amd)define([],e);else{var f;"undefined"!=typeof window?f=window:"undefined"!=typeof global?f=global:"undefined"!=typeof self&&(f=self),f.Bn=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
+Bn.View = _dereq_('./view');
 
-Bn.View = require('./view');
+Bn.EventEmitter = _dereq_('./event-emitter-lite');
 
-Bn.EventEmitter = require('./event-emitter-lite');
-
-Bn.Utils = require('./utils');
+Bn.Utils = _dereq_('./utils');
 
 
-},{"./event-emitter-lite":2,"./utils":3,"./view":4}],2:[function(require,module,exports){
+},{"./event-emitter-lite":2,"./utils":3,"./view":4}],2:[function(_dereq_,module,exports){
 var EventEmitterLite,
   __slice = [].slice;
 
@@ -62,7 +60,7 @@ module.exports = EventEmitterLite = (function() {
 })();
 
 
-},{}],3:[function(require,module,exports){
+},{}],3:[function(_dereq_,module,exports){
 module.exports = {
   extend: function(obj, props) {
     var k, v;
@@ -85,14 +83,14 @@ module.exports = {
 };
 
 
-},{}],4:[function(require,module,exports){
+},{}],4:[function(_dereq_,module,exports){
 var EventEmitter, View, extend,
   __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-EventEmitter = require('./event-emitter-lite');
+EventEmitter = _dereq_('./event-emitter-lite');
 
-extend = require('./utils').extend;
+extend = _dereq_('./utils').extend;
 
 module.exports = View = (function() {
   extend(View.prototype, EventEmitter.prototype);
@@ -165,3 +163,5 @@ module.exports = View = (function() {
 
 
 },{"./event-emitter-lite":2,"./utils":3}]},{},[1])
+(1)
+});
